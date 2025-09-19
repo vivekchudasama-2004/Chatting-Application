@@ -1,5 +1,7 @@
 # Chatting Application
 
+> **⚠️ IMPORTANT NOTICE**: This is a **desktop Java Swing application** that runs locally on your computer. It **cannot be deployed as a web service** and has no web URL. See [NO-WEB-DEPLOYMENT.md](NO-WEB-DEPLOYMENT.md) for details.
+
 Welcome to the Chatting Application! This project is designed to facilitate real-time communication between users using Java Swing GUI and Socket programming. Below is an overview of the application's features, technologies used, and deployment instructions.
 
 ## Features
@@ -23,6 +25,10 @@ Welcome to the Chatting Application! This project is designed to facilitate real
 - **Person2.java**: Acts as the server (listens on port 2024)
 - **Person1.java**: Acts as the client (connects to the server)
 - Communication uses Java's DataInputStream/DataOutputStream over TCP sockets
+
+## ⚠️ Important: Desktop Application Notice
+
+**This is a desktop Java Swing GUI application that cannot be deployed as a web service.** It requires a local desktop environment to run. For detailed deployment options and alternatives, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Quick Start
 
@@ -133,6 +139,8 @@ Chatting-Application/
 ├── run.sh                         # Simple run script
 ├── Dockerfile                     # Docker configuration
 ├── docker-compose.yml             # Docker Compose configuration
+├── DEPLOYMENT.md                  # Deployment guide and limitations
+├── REQUIREMENTS.md                # System requirements
 └── README.md                      # This file
 ```
 
