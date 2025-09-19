@@ -1,5 +1,7 @@
 # Chatting Application
 
+> **⚠️ IMPORTANT NOTICE**: This is a **desktop Java Swing application** that runs locally on your computer. It **cannot be deployed as a web service** and has no web URL. See [NO-WEB-DEPLOYMENT.md](NO-WEB-DEPLOYMENT.md) for details.
+
 Welcome to the Chatting Application! This project is designed to facilitate real-time communication between users using Java Swing GUI and Socket programming. Below is an overview of the application's features, technologies used, and deployment instructions.
 
 ## Features
