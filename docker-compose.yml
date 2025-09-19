@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  chat-server:
+    build: .
+    container_name: chat-server
+    ports:
+      - "2024:2024"
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    networks:
+      - chat-network
+    command: ["java", "-jar", "person2-server.jar"]
+
+  chat-client:
+    build: .
+    container_name: chat-client
+    depends_on:
+      - chat-server
+    environment:
+      - DISPLAY=${DISPLAY:-:0}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    networks:
+      - chat-network
+    command: ["java", "-jar", "person1-client.jar"]
+
+networks:
+  chat-network:
+    driver: bridge
